@@ -2,7 +2,14 @@
 
 ## Español
 ### Sobre el proyecto
-A lo largo de este proyecto realizado en la unidad de Next.js del curso de "Certificado Frontend" de Digital House, realice una red social similar a Twitter / X utilizando un backend otorgado para la unidad. Aprendi a realizar de forma efectiva llamados a la API para realizar GETs y POSTs de manera que el usuario pueda interactuar con la UI de la manera mas realista posible. Este puede iniciar sesion, crear usuario, postear mensajes, responder mensajes y cerrar sesion. Utilice cookies temporales para la verificacion de inicio de sesion y creacion de usuarios.
+A lo largo de este proyecto, desarrollado en la unidad de Next.js del curso de Certificado Frontend de Digital House, creé una red social similar a Twitter/X, utilizando un backend proporcionado específicamente para la unidad.
+En este proyecto, aprendí a realizar llamados a la API de manera efectiva, implementando métodos GET y POST que permiten al usuario interactuar con la interfaz de una forma fluida y realista. Las funcionalidades desarrolladas incluyen:
+- Inicio de sesión.
+- Creación de usuarios.
+- Publicación de mensajes.
+- Respuesta a mensajes.
+- Cierre de sesión.
+Además, utilicé cookies temporales para gestionar la verificación de inicio de sesión y la creación de usuarios, garantizando un manejo seguro y eficiente de las sesiones.
 
 ### Dependencias
 - Next.js (version 15.0.3)
@@ -26,9 +33,9 @@ A lo largo de este proyecto realizado en la unidad de Next.js del curso de "Cert
 - Tailwind
 
 ### Instrucciones para correr el proyecto
-1. Clonear el repositorio
-2. Instalar las dependencias mencionadas
-3. Instalar Docker
+1. Clonear el repositorio.
+2. Instalar las dependencias mencionadas.
+3. Instalar y abrir Docker.
 4. Desde la terminal, en la carpeta del proyecto, ejecutar en orden:
 
    ```bash
@@ -46,10 +53,52 @@ A lo largo de este proyecto realizado en la unidad de Next.js del curso de "Cert
    
 
 ## English
-### About this project
+### About the project
+Throughout this project, developed in the Next.js module of the Frontend Certificate course at Digital House, I created a social network similar to Twitter/X, utilizing a backend specifically provided for the module.
+In this project, I learned to effectively make API calls, implementing GET and POST methods that enable users to interact with the interface in a smooth and realistic way. The functionalities developed include:
+- User login.
+- User registration.
+- Posting messages.
+- Replying to messages.
+- Logging out.
+
+Additionally, I utilized temporary cookies to manage login verification and user registration, ensuring secure and efficient session handling.
 
 ### Dependencies
+- Next.js (version 15.0.3)
+- React (version 18.3.1)
+- React-dom (version 18.3.1)
+- React-hook-form (version 7.53.2)
+- React-infinite-scroll-component (version 6.1.0)
+- Redis (version 4.7.0) - (port 6379)
+- Tailwind (version 3.4.15)
+- uuid (version 11.0.3)
+- yup (react-hook-form resolver) (version 1.5.0)
+- storybook (version 8.4.5)
+- postcss (version 8.4.49)
+- autoprefixer (version 10.4.20)
 
-### Used softwares
-
+### Used softwares and technologies
+- React
+- Next.js
+- Insomnia
+- Docker
+- Tailwind
+- 
 ### Instructions
+1. Clone the repository.
+2. Install the mentioned dependencies.
+3. Install and open Docker.
+4. From the terminal, in the project folder, execute the following commands in order:
+   ```bash
+   docker-compose up db
+   ```
+   ```bash
+   docker-compose up javaapp
+   ```
+   ```bash
+   docker-compose up redis
+   ```
+   ```bash
+   npm run dev
+   ```
