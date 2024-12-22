@@ -11,22 +11,21 @@ type UserListProps = {
 
 const UserList = ({ initialUserPage }: UserListProps) => {
   const [page, setPage] = useState<PageType<TrendingUserType>>(initialUserPage);
-  const [users, setUsers] = useState<TrendingUserType[]>(initialUserPage.content);
- 
+  const [users, setUsers] = useState<TrendingUserType[]>(
+    initialUserPage.content
+  );
 
   const fetchData = async () => {
     const pageNumber = page.pagination.page + 1;
     const response = await exploreAPI.getFollowRecomendations(pageNumber, 20);
     setPage(response);
     setUsers([...users, ...response.content]);
-    
   };
 
   const refresh = async () => {
     const response = await exploreAPI.getFollowRecomendations(0, 10);
     setPage(response);
     setUsers(response.content);
-    
   };
 
   return (
@@ -34,10 +33,10 @@ const UserList = ({ initialUserPage }: UserListProps) => {
       dataLength={users.length} //This is important field to render the next data
       next={fetchData}
       hasMore={!page.pagination.last}
-      loader={<h4>Cargando mensajes...</h4>}
+      loader={<h4 style={{ color: "white" }}>Cargando usuarios...</h4>}
       endMessage={
-        <p style={{ textAlign: "center" }}>
-          <b>Ups! No hay mas mensajes</b>
+        <p style={{ textAlign: "center", color: "white", width: "100%" }}>
+          <b>Ups! No hay mas usuarios</b>
         </p>
       }
       // below props only if you need pull down functionality
@@ -45,12 +44,14 @@ const UserList = ({ initialUserPage }: UserListProps) => {
       pullDownToRefresh
       pullDownToRefreshThreshold={50}
       pullDownToRefreshContent={
-        <h3 style={{ textAlign: "center" }}>
+        <h3 style={{ textAlign: "center", color: "white" }}>
           &#8595; Arrastra hacia abajo para refrescar
         </h3>
       }
       releaseToRefreshContent={
-        <h3 style={{ textAlign: "center" }}>&#8593; Suelta para refrescar</h3>
+        <h3 style={{ textAlign: "center", color: "white" }}>
+          &#8593; Suelta para refrescar
+        </h3>
       }
     >
       {users.map((user, index) => (

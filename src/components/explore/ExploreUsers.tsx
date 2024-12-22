@@ -11,10 +11,10 @@ const ExploreUsers = ({ users }: ExploreUsersProps) => {
   return (
     <>
       <div
-        className="bg-gray-200 rounded-lg px-8 py-4"
+        className="rounded-lg px-8 py-4 border border-gray-600"
         style={{ minWidth: 250 }}
       >
-        <h2 className="mb-2">A quien seguir</h2>
+        <h2 className="mb-2 text-white">A quien seguir</h2>
         {users.slice(0, 4).map((user, index) => (
           <UserCard user={user} key={index} layout={UserCardLayout.VERTICAL}/>
         ))}

@@ -19,7 +19,12 @@ type UserTabsProps = {
   followers: TrendingUserType[];
 };
 
-const UserTabs = ({ messages, replies, followers, followings  }: UserTabsProps) => {
+const UserTabs = ({
+  messages,
+  replies,
+  followers,
+  followings,
+}: UserTabsProps) => {
   const [tab, setTab] = useState<TabView>(TabView.MESSAGES);
 
   return (
@@ -59,22 +64,66 @@ const UserTabs = ({ messages, replies, followers, followings  }: UserTabsProps) 
         </div>
       </div>
       <div className="flex w-full flex-col">
-        {tab === TabView.MESSAGES &&
-          messages.map((message, index) => (
-            <Message key={index} message={message} />
-          ))}
-        {tab === TabView.REPLIES &&
-          replies.map((message, index) => (
-            <Message key={index} message={message} />
-          ))}
-          {tab === TabView.FOLLOWERS &&
-          followers.map((user, index) => (
-            <UserCard user={user} key={index} layout={UserCardLayout.VERTICAL}/>
-          ))}
-          {tab === TabView.FOLLOWING &&
-          followings.map((user, index) => (
-            <UserCard user={user} key={index} layout={UserCardLayout.VERTICAL}/>
-          ))}
+        {tab === TabView.MESSAGES && (
+          <>
+            {messages.length > 0 ? (
+              messages.map((message, index) => (
+                <Message key={index} message={message} />
+              ))
+            ) : (
+              <p className="text-white w-full text-center font-semibold">
+                No hay mensajes
+              </p>
+            )}
+          </>
+        )}
+        {tab === TabView.REPLIES && (
+          <>
+            {replies.length > 0 ? (
+              replies.map((message, index) => (
+                <Message key={index} message={message} />
+              ))
+            ) : (
+              <p className="text-white w-full text-center font-semibold">
+                No hay respuestas
+              </p>
+            )}
+          </>
+        )}
+        {tab === TabView.FOLLOWERS && (
+          <>
+            {followers.length > 0 ? (
+              followers.map((user, index) => (
+                <UserCard
+                  user={user}
+                  key={index}
+                  layout={UserCardLayout.VERTICAL}
+                />
+              ))
+            ) : (
+              <p className="text-white w-full text-center font-semibold">
+                No hay seguidores
+              </p>
+            )}
+          </>
+        )}
+        {tab === TabView.FOLLOWING && (
+          <>
+            {followings.length > 0 ? (
+              followings.map((user, index) => (
+                <UserCard
+                  user={user}
+                  key={index}
+                  layout={UserCardLayout.VERTICAL}
+                />
+              ))
+            ) : (
+              <p className="text-white w-full text-center font-semibold">
+                No estás siguiendo a nadie
+              </p>
+            )}
+          </>
+        )}
       </div>
     </div>
   );

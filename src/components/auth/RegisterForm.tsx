@@ -48,26 +48,33 @@ const RegisterForm = () => {
 
   return (
     <FormProvider {...methods}>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form
+        onSubmit={handleSubmit(onSubmit)}
+        className="flex flex-wrap justify-center"
+      >
         <InputText
+          styles="p-4"
           label={"Nombre completo:"}
           fieldName={"name"}
           placeholder={"Anakin Skywalker"}
           type="text"
         />
         <InputText
+          styles="p-4"
           label={"URL de foto de perfil:"}
           fieldName={"photoUrl"}
           placeholder={"https://..."}
           type="text"
         />
         <InputText
+          styles="p-4"
           label={"Nombre de usuario:"}
           fieldName={"username"}
           placeholder={"anakin"}
           type="text"
         />
         <InputText
+          styles="p-4"
           label={"Contraseña:"}
           fieldName={"password"}
           type="password"

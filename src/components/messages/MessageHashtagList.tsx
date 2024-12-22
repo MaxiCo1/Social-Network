@@ -27,6 +27,22 @@ const MessageHashtagList = ({ initialPage }: MessageHashtagListProps) => {
     setPage(response);
     setHashtags(response.content);
   };
+  const randomTendenc = (maxLength: number, actualNumber: number) => {
+    const min = 0;
+    const max = maxLength;
+    const randomNros = [];
+    while (randomNros.length < maxLength / 2) {
+      const random = Math.floor(Math.random() * (max - min)) + min;
+      if (randomNros.indexOf(random) === -1) {
+        randomNros.push(random);
+      }
+    }
+    if (randomNros.includes(actualNumber)) {
+      return <p className="text-gray-400 text-xs">Tendencia en el Tatooine</p>;
+    } else {
+      return <p className="text-gray-400 text-xs">Tendencia en el Universo</p>;
+    }
+  };
 
   return (
     <InfiniteScroll
@@ -35,7 +51,7 @@ const MessageHashtagList = ({ initialPage }: MessageHashtagListProps) => {
       hasMore={!page.pagination.last}
       loader={<h4>Cargando mensajes...</h4>}
       endMessage={
-        <p style={{ textAlign: "center" }}>
+        <p style={{ textAlign: "center", color: "white", width: "100%" }}>
           <b>Ups! No hay mas mensajes</b>
         </p>
       }
@@ -53,7 +69,11 @@ const MessageHashtagList = ({ initialPage }: MessageHashtagListProps) => {
       }
     >
       {hashtags.map((hash, index) => (
-        <MessageHashtag hash={hash} key={index} />
+        <div className="my-4" key={index}>
+          {randomTendenc(hashtags.length, index)}
+
+          <MessageHashtag hash={hash} />
+        </div>
       ))}
     </InfiniteScroll>
   );

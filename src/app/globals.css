@@ -34,14 +34,15 @@
     @apply text-base;
   }
   .button-primary {
-    @apply rounded-lg;
-    @apply bg-blue-400;
+    @apply rounded-full;
+    @apply bg-white;
     @apply px-6;
     @apply py-2;
-    @apply text-white;
+    @apply text-black;
+    @apply font-semibold;
   }
   .button-primary:hover {
-    @apply bg-blue-500;
+    @apply opacity-85;
   }
 
   .button-secondary {

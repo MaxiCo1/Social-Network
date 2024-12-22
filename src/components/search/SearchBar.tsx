@@ -19,7 +19,12 @@ const SearchBar = ({ initialQuery }: SearchBarProps) => {
   });
   const onSubmit = (data: FormData) => {
     console.log(JSON.stringify(data));
-    router.push(`/?query=${data.query ?? ""}&type=hash`);
+    if (data.query){
+      router.push(`/?query=${data.query ?? ""}&type=hash`);
+    } else{
+      router.push(`/`);
+    }
+    
   };
 
   useEffect(() => {
@@ -32,9 +37,9 @@ const SearchBar = ({ initialQuery }: SearchBarProps) => {
         {...register("query")}
         type="text"
         placeholder={"Buscar por #"}
-        className="flex-grow  mr-4 p-4 w-full rounded bg-gray-50 border border-gray-200"
+        className="flex-grow p-4 w-full rounded-full bg-transparent border border-gray-600 text-white"
       />
-      <button className="button-primary">Buscar</button>
+      {/*<button className="button-primary">Buscar</button>*/}
     </form>
   );
 };

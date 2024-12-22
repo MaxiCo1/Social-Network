@@ -22,7 +22,7 @@ const MessagePage = async ({ params }: { params: { id: string } }) => {
   ]);
 
   return (
-    <main className="flex flex-col bg-gray-100 p-8">
+    <main className="flex flex-col bg-black w-full">
       <MessagePageContainer
         message={message}
         repliesPage={repliesPage}

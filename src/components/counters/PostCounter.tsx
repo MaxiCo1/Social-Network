@@ -3,11 +3,10 @@ type PostCountProps = {
 };
 
 const PostCounter = ({ count }: PostCountProps) => {
-  const label = count > 1 ? "posteos" : "posteo";
+  const label = count > 1 ? "posteos " : "posteo ";
   return (
     <>
-      {count}
-      {label}
+      {count} {label}
     </>
   );
 };

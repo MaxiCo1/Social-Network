@@ -18,8 +18,8 @@ const IndexPage = async ({
     : await messageApi.getMessagesFeed(0, 10);
 
   return (
-    <main className="flex flex-col bg-gray-100 p-8">
-      <section className="flex flex-col mb-8">
+    <main className="flex flex-col bg-black">
+      <section className="flex flex-col mb-8 p-0">
         <IndexPageContainer
           initialQuery={searchParams?.query}
           messagesResponse={messagesResponse}

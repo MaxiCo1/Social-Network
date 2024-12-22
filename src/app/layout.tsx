@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Mulish, Alegreya } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import { cookies } from "next/headers";
 
 /*const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,12 +26,9 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const loggedUsernameCookie = (await cookies()).get("SocialUsername");
-
   return (
     <html lang="en">
       <body className={`${mulish.variable} ${alegreya.variable}`}>
-        <Navbar loggedUsername={loggedUsernameCookie?.value} />
         {children}
       </body>
     </html>

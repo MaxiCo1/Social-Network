@@ -15,22 +15,20 @@ type FormData = {
 };
 
 const LoginForm = () => {
-
-  const router = useRouter()
+  const router = useRouter();
   const [serverError, setServerError] = useState<string | null>(null);
   const methods = useForm<FormData>({
     resolver: yupResolver(LoginScheme),
   });
   const { handleSubmit } = methods;
 
-
   const onSubmit = async (data: FormData) => {
-    setServerError(null)
+    setServerError(null);
     try {
       const loginResponse = await authAPI.login(data.username, data.password);
       console.log(JSON.stringify(loginResponse));
-      router.push("/")
-      router.refresh()
+      router.push("/");
+      router.refresh();
     } catch (e) {
       if (e instanceof AccessDeniedError) {
         setServerError("Tus credenciales son invalidas");
@@ -60,7 +58,7 @@ const LoginForm = () => {
         <SubmitButton
           label={"Iniciar sesión"}
           onSubmit={onSubmit}
-          styles="mt-4"
+          styles="mt-4 w-full"
         />
         {serverError && <div className="mt-4 text-red-600">{serverError}</div>}
       </form>

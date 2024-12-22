@@ -30,21 +30,25 @@ const UserPageContainerAsync = async ({ username }: UserPageContainerProps) => {
   ]);
 
   return (
-    <main className="flex flex-col bg-gray-100 p-8">
-      <section className="flex flex-col mb-8">
-        <div className="text-center mb-4 block relative w-20 h-20">
-          <Image
-            className="rounded-full"
-            src={user.photoUrl}
-            alt={user.username}
-            sizes="10vw"
-            fill
-            priority //prioriza la carga de la imagen
-          />
-        </div>
-        <h2 className="mb-1">{user.name}</h2>
-        <div className="text-md mb-4 text-gray-600 cursor-pointer">
-          @<Link href={`/users/${user.username}`}>{user.username}</Link>
+    <main className="flex flex-col bg-blacks pt-6 text-white">
+      <section className="flex flex-col mb-8 px-20 border-b border-gray-600">
+        <div className="flex">
+          <div className="text-center mb-4 block relative w-20 h-20">
+            <Image
+              className="rounded-full"
+              src={user.photoUrl}
+              alt={user.username}
+              sizes="10vw"
+              fill
+              priority //prioriza la carga de la imagen
+            />
+          </div>
+          <div className="flex-col justify-center flex pl-6">
+            <h2 className="mb-1">{user.name}</h2>
+            <div className="text-md mb-4 text-gray-400 cursor-pointer">
+              @<Link href={`/users/${user.username}`}>{user.username}</Link>
+            </div>
+          </div>
         </div>
         <div className="mb-4">{user.bio}</div>
         <div className="flex justify-between mb-4">

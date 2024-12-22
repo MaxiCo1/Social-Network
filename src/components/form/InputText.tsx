@@ -21,12 +21,12 @@ const InputText = ({
   } = useFormContext();
   return (
     <div className={`flex flex-col ${styles ?? ""}`}>
-      <label className="mb-2 mt-5">{label}</label>
+      <label className="mb-2 mt-5 text-white">{label}</label>
       <input
         {...register(fieldName)}
         type={type}
         placeholder={placeholder}
-        className="p-4 w-full rounded bg-gray-50 border border-gray-200"
+        className="p-4 w-full rounded-2xl bg-transparent border border-gray-600 text-white"
       />
       {errors && errors[fieldName] && (
         <div className="text-red-600 mt-1 text-xs">Este campo es obligatorio</div>

@@ -19,7 +19,7 @@ const MessageContainer = () => {
   const { message } = useMessages();
   if (!message) return <></>;
   return (
-    <section className="flex flex-col mb-8">
+    <section className="flex flex-col mb-8 p-0">
       <Message message={message} />
     </section>
   );
@@ -34,10 +34,10 @@ const MessagePageContainer = ({
   return (
     <MessageProvider initialPage={repliesPage} initialMessage={message}>
       <MessageContainer />
-      <section className="flex flex-col mb-8">
+      <section className="flex flex-col mb-8 p-0">
         <MessagePostForm parentId={parentId} currentUser={currentUser} />
       </section>
-      <section className="flex flex-col w-full">
+      <section className="flex flex-col w-full p-0">
         <MessageList />
       </section>
     </MessageProvider>

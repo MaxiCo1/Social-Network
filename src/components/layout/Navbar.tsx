@@ -1,6 +1,5 @@
 "use client";
 import authAPI from "@/service/auth/auth.api";
-
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 

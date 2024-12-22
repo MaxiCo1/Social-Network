@@ -32,7 +32,7 @@ const UserTabs = ({ hashtags, users, initialTab }: ExploreTabsProps) => {
 
   return (
     <div>
-      <div className="flex justify-evenly mb-4">
+      <div className="flex justify-evenly mb-4 text-white border-b border-gray-600 w-full">
         <Link href="/explore?type=HASHTAGS">
           <div
             className={`cursor-pointer ${
@@ -52,7 +52,7 @@ const UserTabs = ({ hashtags, users, initialTab }: ExploreTabsProps) => {
           </div>
         </Link>
       </div>
-      <div>
+      <div className="px-5">
         {/*EN CASO DE TENER MAS DE DOS SE PUEDE UTILIZAR EL LO UTILIZADO EN USERCARD PARA LAS CLASES (UTILIZANDO ENUM) */}
         {tab === TabView.HASHTAGS && <MessageHashtagList initialPage={hashtags}/>}
         {tab === TabView.USERS && <UserList initialUserPage={users} />}

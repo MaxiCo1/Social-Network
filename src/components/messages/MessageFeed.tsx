@@ -13,7 +13,7 @@ const MessageFeed = () => {
         hasMore={!messagePage.pagination.last}
         loader={<h4>Cargando mensajes...</h4>}
         endMessage={
-          <p style={{ textAlign: "center" }}>
+          <p style={{ textAlign: "center", color:"white", paddingTop: "20px" }}>
             <b>Ups! No hay mas mensajes</b>
           </p>
         }

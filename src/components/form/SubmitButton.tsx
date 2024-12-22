@@ -12,7 +12,7 @@ const SubmitButton = <T extends FieldValues,>({ styles, onSubmit, label }: Submi
     <div className={`${styles ?? ""}`}>
       <button
         type="submit"
-        className="button-primary"
+        className="button-primary w-full"
         onClick={handleSubmit(onSubmit)}
       >
         {label}

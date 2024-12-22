@@ -20,7 +20,7 @@ const IndexPageContainer = ({
 }: IndexPageContainerProps) => {
   return (
     <MessageProvider initialPage={messagesResponse}>
-      <SearchBar initialQuery={initialQuery} />
+      {/*<SearchBar initialQuery={initialQuery} />*/}
       <MessagePostForm currentUser={currentUser}/>
       <MessageFeed />
     </MessageProvider>
