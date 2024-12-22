@@ -50,7 +50,17 @@ Además, utilicé cookies temporales para gestionar la verificación de inicio d
    ```bash
    npm run dev
    ```
-   
+5. En el caso de querer navegar a la pagina de FAQ es necesario clonar el siguiente repositorio de Strapi ejecutando:
+```
+```bash
+   git clone https://github.com/MaxiCo1/Strapi-SocialNetwork.git
+```
+6. Luego de clonar el repositorio strapi es necesario inicializarlo, accediendo a la ruta del proyecto en sus archivo y ejecutar:
+```
+```bash
+   npm run develop
+```
+
 
 ## English
 ### About the project
@@ -84,7 +94,7 @@ Additionally, I utilized temporary cookies to manage login verification and user
 - Insomnia
 - Docker
 - Tailwind
-- 
+
 ### Instructions
 1. Clone the repository.
 2. Install the mentioned dependencies.
@@ -102,3 +112,13 @@ Additionally, I utilized temporary cookies to manage login verification and user
    ```bash
    npm run dev
    ```
+5. If you want to navigate to the FAQ page, you need to clone the following Strapi repository by running:
+```
+```bash
+   git clone https://github.com/MaxiCo1/Strapi-SocialNetwork.git
+```
+6. After cloning the Strapi repository, you need to initialize it by navigating to the project's directory and running:
+```
+```bash
+   npm run develop
+```

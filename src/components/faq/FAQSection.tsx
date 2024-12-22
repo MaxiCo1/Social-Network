@@ -26,7 +26,6 @@ const FAQSection = ({ sections }: FAQSectionProps) => {
       <div>
         {sections.map((section) => (
           <div key={section.slug}>
-            {/* Título de la sección, al hacer clic se activa el acordeón y redirige */}
             <div
               className={`cursor-pointer text-lg border-2 border-white mb-4 rounded-full p-4 ${
                 active(section.slug) && "bg-white"
@@ -42,7 +41,6 @@ const FAQSection = ({ sections }: FAQSectionProps) => {
               </h2>
             </div>
 
-            {/* Contenido de la sección, solo visible si está activa */}
             {active(section.slug) && (
               <div className="mt-2 text-white px-4 pb-4">
                 {section.body.map((block, index) => (
