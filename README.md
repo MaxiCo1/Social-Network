@@ -14,3 +14,26 @@ En este proyecto, aprendí a realizar llamados a la API de manera efectiva, impl
 - Cierre de sesión.
 
 Además, utilicé cookies temporales para gestionar la verificación de inicio de sesión y la creación de usuarios, garantizando un manejo seguro y eficiente de las sesiones.
+
+### Dependencias
+
+- Next.js (version 15.0.3)
+- React (version 18.3.1)
+- React-dom (version 18.3.1)
+- React-hook-form (version 7.53.2)
+- React-infinite-scroll-component (version 6.1.0)
+- Redis (version 4.7.0) - (port 6379)
+- Tailwind (version 3.4.15)
+- uuid (version 11.0.3)
+- yup (react-hook-form resolver) (version 1.5.0)
+- storybook (version 8.4.5)
+- postcss (version 8.4.49)
+- autoprefixer (version 10.4.20)
+
+### Softwares y tecnologias utilizados
+
+- React
+- Next.js
+- Insomnia
+- Docker
+- Tailwind
