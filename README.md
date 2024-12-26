@@ -37,3 +37,38 @@ Además, utilicé cookies temporales para gestionar la verificación de inicio d
 - Insomnia
 - Docker
 - Tailwind
+
+### Instrucciones para correr el proyecto
+
+1. Clonear el repositorio.
+2. Instalar las dependencias mencionadas.
+3. Instalar y abrir Docker.
+4. Desde la terminal, en la carpeta del proyecto, ejecutar en orden:
+
+ ```bash
+ docker-compose up db
+ ```
+
+ ```bash
+ docker-compose up javaapp
+ ```
+
+ ```bash
+ docker-compose up redis
+ ```
+
+ ```bash
+ npm run dev
+ ```
+
+5. En el caso de querer navegar a la pagina de FAQ es necesario clonar el siguiente repositorio de Strapi ejecutando:
+
+```bash
+   git clone https://github.com/MaxiCo1/Strapi-SocialNetwork.git
+```
+
+6. Luego de clonar el repositorio strapi es necesario inicializarlo, accediendo a la ruta del proyecto en sus archivo y ejecutar:
+
+```bash
+   npm run develop
+```
