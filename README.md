@@ -72,3 +72,77 @@ Además, utilicé cookies temporales para gestionar la verificación de inicio d
 ```bash
    npm run develop
 ```
+
+## English
+
+### About the project
+
+Throughout this project, developed in the Next.js module of the Frontend Certificate course at Digital House, I created a social network similar to Twitter/X, utilizing a backend specifically provided for the module.
+In this project, I learned to effectively make API calls, implementing GET and POST methods that enable users to interact with the interface in a smooth and realistic way. The functionalities developed include:
+
+- User login.
+- User registration.
+- Posting messages.
+- Replying to messages.
+- Logging out.
+
+Additionally, I utilized temporary cookies to manage login verification and user registration, ensuring secure and efficient session handling.
+
+### Dependencies
+
+- Next.js (version 15.0.3)
+- React (version 18.3.1)
+- React-dom (version 18.3.1)
+- React-hook-form (version 7.53.2)
+- React-infinite-scroll-component (version 6.1.0)
+- Redis (version 4.7.0) - (port 6379)
+- Tailwind (version 3.4.15)
+- uuid (version 11.0.3)
+- yup (react-hook-form resolver) (version 1.5.0)
+- storybook (version 8.4.5)
+- postcss (version 8.4.49)
+- autoprefixer (version 10.4.20)
+
+### Used softwares and technologies
+
+- React
+- Next.js
+- Insomnia
+- Docker
+- Tailwind
+
+### Instructions
+
+1. Clone the repository.
+2. Install the mentioned dependencies.
+3. Install and open Docker.
+4. From the terminal, in the project folder, execute the following commands in order:
+
+```bash
+docker-compose up db
+```
+
+```bash
+docker-compose up javaapp
+```
+
+```bash
+docker-compose up redis
+```
+
+```bash
+npm run dev
+```
+
+5. If you want to navigate to the FAQ page, you need to clone the following Strapi repository by running:
+
+```bash
+   git clone https://github.com/MaxiCo1/Strapi-SocialNetwork.git
+```
+
+6. After cloning the Strapi repository, you need to initialize it by navigating to the project's directory and running:
+
+```bash
+   npm run develop
+```
+
